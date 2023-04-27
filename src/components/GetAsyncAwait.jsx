@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GET_USER } from "../utils/constants";
 
 export default function GetAsyncAwait() {
@@ -6,7 +6,7 @@ export default function GetAsyncAwait() {
   const [loading, setLoading] = useState(false); //Opcional
   const [error, setError] = useState(null); //Opcional
 
-  useState(() => {
+  useEffect(() => {
     const getData = async () => {
       try {
         setLoading(true);
@@ -21,7 +21,7 @@ export default function GetAsyncAwait() {
       }
     };
     getData();
-  });
+  }, []);
 
   if (loading) return <p>Cargando...</p>;
 
