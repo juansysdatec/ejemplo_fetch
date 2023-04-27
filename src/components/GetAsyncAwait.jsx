@@ -50,7 +50,7 @@ export default function GetAsyncAwait() {
           data.users?.map((user) => {
             return (
               <div key={user.id}>
-                <p>{user}</p>
+                <p>{user.email}</p>
               </div>
             );
           })
