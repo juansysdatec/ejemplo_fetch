@@ -20,7 +20,7 @@ export default function PostAsyncAwait() {
 
     try {
       const response = await fetch(ADD_USER, {
-        method: "POST",
+        method: "POST", //PUT, DELETE(?)
         headers: {
           "Content-Type": "application/json",
         },

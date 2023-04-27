@@ -19,7 +19,7 @@ export default function PostThen() {
     setLoading(true);
 
     fetch(ADD_USER, {
-      method: "POST",
+      method: "POST", //PUT, DELETE(?)
       headers: {
         "Content-Type": "application/json",
       },

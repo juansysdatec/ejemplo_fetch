@@ -2,9 +2,9 @@ import { useState } from "react";
 import { GET_USER } from "../utils/constants";
 
 export default function GetAsyncAwait() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState(null); //Obligatorio
+  const [loading, setLoading] = useState(false); //Opcional
+  const [error, setError] = useState(null); //Opcional
 
   useState(() => {
     const getData = async () => {
@@ -47,12 +47,10 @@ export default function GetAsyncAwait() {
         }}
       >
         {data ? (
-          data.users?.map((user) => {
+          data?.map((user) => {
             return (
               <div key={user.id}>
-                <p>{user.name}</p>
-                <p>{user.email}</p>
-                <p>{user.website}</p>
+                <p>{user}</p>
               </div>
             );
           })
