@@ -47,7 +47,7 @@ export default function GetAsyncAwait() {
         }}
       >
         {data ? (
-          data?.map((user) => {
+          data.users?.map((user) => {
             return (
               <div key={user.id}>
                 <p>{user}</p>
